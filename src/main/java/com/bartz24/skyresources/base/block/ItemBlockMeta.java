@@ -13,7 +13,7 @@ public class ItemBlockMeta extends ItemBlock
 		{
 			throw new IllegalArgumentException(String.format(
 					"The given Block %s is not an instance of ISpecialBlockName!",
-					block.getUnlocalizedName()));
+					block.getTranslationKey()));
 		}
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -26,9 +26,9 @@ public class ItemBlockMeta extends ItemBlock
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + "."
+		return super.getTranslationKey(stack) + "."
 				+ ((IMetaBlockName) this.block).getSpecialName(stack);
 	}
 

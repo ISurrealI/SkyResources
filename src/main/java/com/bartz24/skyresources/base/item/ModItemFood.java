@@ -12,7 +12,7 @@ public class ModItemFood extends ItemFood
 			String unlocalizedName, String registryName)
 	{
 		super(amount, saturation, isWolfFood);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		setRegistryName(registryName);
 		this.setCreativeTab(ModCreativeTabs.tabMain);
 	}

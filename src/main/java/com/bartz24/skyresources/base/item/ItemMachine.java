@@ -43,7 +43,7 @@ public class ItemMachine extends Item
 	public ItemMachine(String baseName, CreativeTabs tab, boolean showHeatInfo, boolean showFuelInfo,
 			boolean showSpeedInfo, boolean showEfficiencyInfo)
 	{
-		setUnlocalizedName(References.ModID + "." + baseName + ".");
+		setTranslationKey(References.ModID + "." + baseName + ".");
 		setRegistryName(baseName);
 		setHasSubtypes(true);
 		this.setCreativeTab(tab);
@@ -54,9 +54,9 @@ public class ItemMachine extends Item
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + MachineVariants.values()[stack.getMetadata()].getName();
+		return super.getTranslationKey(stack) + MachineVariants.values()[stack.getMetadata()].getName();
 	}
 
 	@Override

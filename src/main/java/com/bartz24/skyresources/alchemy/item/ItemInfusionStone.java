@@ -28,7 +28,7 @@ public class ItemInfusionStone extends Item
 	public ItemInfusionStone(int durability, String unlocalizedName, String registryName)
 	{
 		this.setMaxDamage((int) (durability * ConfigOptions.toolSettings.infusionStoneBaseDurability));
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		setRegistryName(registryName);
 		this.setMaxStackSize(1);
 		this.setNoRepair();

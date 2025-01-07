@@ -45,7 +45,7 @@ public class CrucibleTESR extends TileEntitySpecialRenderer<CrucibleTile>
 
 		ResourceLocation textureRL = fluid.getStill();
 		TextureAtlasSprite texture = Minecraft.getMinecraft().getRenderItem().getItemModelMesher().getModelManager()
-				.getTextureMap().getAtlasSprite(textureRL.getResourceDomain() + ":" + textureRL.getResourcePath());
+				.getTextureMap().getAtlasSprite(textureRL.getNamespace() + ":" + textureRL.getPath());
 
 		final int color;
 

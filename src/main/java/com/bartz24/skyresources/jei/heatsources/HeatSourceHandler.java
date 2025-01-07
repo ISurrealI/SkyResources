@@ -50,7 +50,7 @@ public class HeatSourceHandler implements IRecipeHandler<HeatSourceJEI>
 		{
 			Item item = Item.getItemFromBlock(state.getBlock());
 			if (item == Items.AIR)
-				sources.add(new HeatSourceJEI(state.getBlock().getUnlocalizedName(),
+				sources.add(new HeatSourceJEI(state.getBlock().getTranslationKey(),
 						HeatSources.getHeatSourceValue(state)));
 			else
 				sources.add(new HeatSourceJEI(new ItemStack(item, 1, state.getBlock().getMetaFromState(state)),

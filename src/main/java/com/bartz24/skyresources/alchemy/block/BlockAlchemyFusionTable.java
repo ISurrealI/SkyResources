@@ -24,7 +24,7 @@ public class BlockAlchemyFusionTable extends BlockMachine
 	public BlockAlchemyFusionTable(String unlocalizedName, String registryName, float hardness, float resistance)
 	{
 		super(Material.WOOD);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabAlchemy);
 		this.setHardness(hardness);
 		this.setResistance(resistance);

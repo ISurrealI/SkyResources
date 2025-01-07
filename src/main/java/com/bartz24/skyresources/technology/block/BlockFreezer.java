@@ -37,7 +37,7 @@ public class BlockFreezer extends BlockMachine
 	public BlockFreezer(String unlocalizedName, String registryName, float hardness, float resistance)
 	{
 		super(Material.IRON);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
@@ -136,7 +136,7 @@ public class BlockFreezer extends BlockMachine
 
 	public IBlockState getStateFromMeta(int meta)
 	{
-		EnumFacing enumfacing = EnumFacing.getHorizontal(meta);
+		EnumFacing enumfacing = EnumFacing.byHorizontalIndex(meta);
 		return (meta & 8) > 0
 				? this.getDefaultState().withProperty(PART, EnumPartType.BOTTOM).withProperty(FACING, enumfacing)
 				: this.getDefaultState().withProperty(PART, EnumPartType.TOP).withProperty(FACING, enumfacing);

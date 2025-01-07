@@ -29,7 +29,7 @@ public class BlockCrucibleInserter extends BlockMachine
 			float resistance)
 	{
 		super(Material.ROCK);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
 		this.setHardness(hardness);
 		this.setResistance(resistance);

@@ -910,8 +910,8 @@ public class ModCrafting
 
 			if (s == curPriority || s.isEmpty())
 				continue;
-			int indexNew = modNames.indexOf(s.getItem().delegate.name().getResourceDomain());
-			int indexCur = modNames.indexOf(curPriority.getItem().delegate.name().getResourceDomain());
+			int indexNew = modNames.indexOf(s.getItem().delegate.name().getNamespace());
+			int indexCur = modNames.indexOf(curPriority.getItem().delegate.name().getNamespace());
 			if (indexNew >= 0 && indexNew < indexCur)
 				curPriority = s;
 		}

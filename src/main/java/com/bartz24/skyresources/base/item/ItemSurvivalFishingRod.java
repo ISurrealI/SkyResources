@@ -27,7 +27,7 @@ public class ItemSurvivalFishingRod extends ItemFishingRod
 			String registryName)
 	{		
 		super();
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabMain);
 		setRegistryName(registryName);
 	}

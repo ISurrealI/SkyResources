@@ -17,16 +17,16 @@ public class ItemComponent extends Item
 
 	public ItemComponent(String baseName, CreativeTabs tab)
 	{
-		setUnlocalizedName(References.ModID + "." + baseName + ".");
+		setTranslationKey(References.ModID + "." + baseName + ".");
 		setRegistryName(baseName);
 		setHasSubtypes(true);
 		this.setCreativeTab(tab);
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + MachineVariants.values()[stack.getMetadata()].getName();
+		return super.getTranslationKey(stack) + MachineVariants.values()[stack.getMetadata()].getName();
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class TechItemComponent extends Item
 	{
 		super();
 
-		setUnlocalizedName(References.ModID + ".techItemComponent.");
+		setTranslationKey(References.ModID + ".techItemComponent.");
 		setRegistryName("TechItemComponent");
 		setHasSubtypes(true);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
@@ -43,9 +43,9 @@ public class TechItemComponent extends Item
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + names.get(stack.getItemDamage());
+		return super.getTranslationKey(stack) + names.get(stack.getItemDamage());
 	}
 
 	@Override

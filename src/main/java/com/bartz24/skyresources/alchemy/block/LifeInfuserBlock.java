@@ -30,7 +30,7 @@ public class LifeInfuserBlock extends BlockMachine
 			float resistance)
 	{
 		super(Material.WOOD);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabAlchemy);
 		this.setHardness(hardness);
 		this.setResistance(resistance);

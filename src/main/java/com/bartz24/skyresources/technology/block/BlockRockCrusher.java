@@ -38,7 +38,7 @@ public class BlockRockCrusher extends BlockMachine
 	public BlockRockCrusher(String unlocalizedName, String registryName, float hardness, float resistance)
 	{
 		super(Material.ROCK);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
@@ -97,7 +97,7 @@ public class BlockRockCrusher extends BlockMachine
 	}
 	public IBlockState getStateFromMeta(int meta)
 	{
-		EnumFacing enumfacing = EnumFacing.getHorizontal(meta);
+		EnumFacing enumfacing = EnumFacing.byHorizontalIndex(meta);
 		return this.getDefaultState().withProperty(FACING, enumfacing);
 	}
 

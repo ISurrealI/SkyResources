@@ -20,7 +20,7 @@ public class BaseBlock extends Block
 			SoundType stepSound)
 	{
 		super(material);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabMain);
 		this.setHardness(hardness);
 		this.setResistance(resistance);

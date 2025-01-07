@@ -46,7 +46,7 @@ public class BlockDirtFurnace extends BlockContainer
 	public BlockDirtFurnace(String unlocalizedName, String registryName, float hardness, float resistance)
 	{
 		super(Material.GROUND);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
@@ -220,7 +220,7 @@ public class BlockDirtFurnace extends BlockContainer
 	 */
 	public IBlockState getStateFromMeta(int meta)
 	{
-		EnumFacing enumfacing = EnumFacing.getHorizontal(meta);
+		EnumFacing enumfacing = EnumFacing.byHorizontalIndex(meta);
 		return (meta & 8) > 0 ? this.getDefaultState().withProperty(BURNING, false).withProperty(FACING, enumfacing)
 				: this.getDefaultState().withProperty(BURNING, true).withProperty(FACING, enumfacing);
 	}

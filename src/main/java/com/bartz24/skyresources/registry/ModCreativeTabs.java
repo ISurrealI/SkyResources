@@ -14,7 +14,7 @@ public class ModCreativeTabs
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem()
+		public ItemStack createIcon()
 		{
 			return new ItemStack(ModItems.ironKnife);
 		}
@@ -25,7 +25,7 @@ public class ModCreativeTabs
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem()
+		public ItemStack createIcon()
 		{
 			return new ItemStack(ModItems.sandstoneInfusionStone);
 		}
@@ -36,7 +36,7 @@ public class ModCreativeTabs
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem()
+		public ItemStack createIcon()
 		{
 			return new ItemStack(ModBlocks.aqueousConcentrator);
 		}

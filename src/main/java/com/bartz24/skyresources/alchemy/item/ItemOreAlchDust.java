@@ -116,7 +116,7 @@ public class ItemOreAlchDust extends Item
 
 	public ItemOreAlchDust()
 	{
-		setUnlocalizedName(References.ModID + ".oreAlchDust.");
+		setTranslationKey(References.ModID + ".oreAlchDust.");
 		setRegistryName("OreAlchDust");
 		setHasSubtypes(true);
 		this.setCreativeTab(ModCreativeTabs.tabAlchemy);
@@ -134,9 +134,9 @@ public class ItemOreAlchDust extends Item
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + names.get(stack.getItemDamage());
+		return super.getTranslationKey(stack) + names.get(stack.getItemDamage());
 	}
 
 	@Override

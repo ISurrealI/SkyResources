@@ -43,7 +43,7 @@ public class BaseItemComponent extends Item
 	{
 		super();
 
-		setUnlocalizedName(References.ModID + ".baseItemComponent.");
+		setTranslationKey(References.ModID + ".baseItemComponent.");
 		setRegistryName("baseitemcomponent");
 		setHasSubtypes(true);
 		this.setCreativeTab(ModCreativeTabs.tabMain);
@@ -64,9 +64,9 @@ public class BaseItemComponent extends Item
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + names.get(stack.getItemDamage());
+		return super.getTranslationKey(stack) + names.get(stack.getItemDamage());
 	}
 
 	@Override

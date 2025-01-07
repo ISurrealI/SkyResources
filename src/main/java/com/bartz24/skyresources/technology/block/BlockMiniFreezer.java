@@ -39,7 +39,7 @@ public class BlockMiniFreezer extends BlockMachine
 	public BlockMiniFreezer(String unlocalizedName, String registryName, float hardness, float resistance)
 	{
 		super(Material.GROUND);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
@@ -140,7 +140,7 @@ public class BlockMiniFreezer extends BlockMachine
 
 	public IBlockState getStateFromMeta(int meta)
 	{
-		EnumFacing enumfacing = EnumFacing.getFront(meta);
+		EnumFacing enumfacing = EnumFacing.byIndex(meta);
 
 		if (enumfacing.getAxis() == EnumFacing.Axis.Y)
 		{

@@ -37,7 +37,7 @@ public class BlockCasing extends BlockContainer implements IMetaBlockName {
 
     public BlockCasing(String unlocalizedName, String registryName, float hardness, float resistance) {
         super(Material.ROCK);
-        this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+        this.setTranslationKey(References.ModID + "." + unlocalizedName);
         this.setCreativeTab(ModCreativeTabs.tabMain);
         this.setHardness(hardness);
         this.setResistance(resistance);

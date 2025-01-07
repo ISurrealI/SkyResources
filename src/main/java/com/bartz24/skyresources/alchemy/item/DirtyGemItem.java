@@ -22,7 +22,7 @@ public class DirtyGemItem extends Item
 	{
 		super();
 
-		setUnlocalizedName(References.ModID + ".dirtyGem.");
+		setTranslationKey(References.ModID + ".dirtyGem.");
 		setRegistryName("DirtyGem");
 		setHasSubtypes(true);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
@@ -37,9 +37,9 @@ public class DirtyGemItem extends Item
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + names.get(stack.getItemDamage());
+		return super.getTranslationKey(stack) + names.get(stack.getItemDamage());
 	}
 
 	@Override

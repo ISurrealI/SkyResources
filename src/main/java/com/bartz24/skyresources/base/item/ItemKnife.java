@@ -36,7 +36,7 @@ public class ItemKnife extends ItemAxe
 		super(material, (float) (ConfigOptions.toolSettings.knifeBaseDamage + material.getAttackDamage()), -3);
 		toolMaterial = material;
 		this.setMaxDamage((int) (material.getMaxUses() * ConfigOptions.toolSettings.knifeBaseDurability));
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		setRegistryName(registryName);
 		this.setMaxStackSize(1);
 		this.setCreativeTab(ModCreativeTabs.tabTech);

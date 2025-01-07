@@ -43,7 +43,7 @@ public class BlockAqueousDeconcentrator extends BlockMachine
 	public BlockAqueousDeconcentrator(String unlocalizedName, String registryName, float hardness, float resistance)
 	{
 		super(Material.GROUND);
-		this.setUnlocalizedName(References.ModID + "." + unlocalizedName);
+		this.setTranslationKey(References.ModID + "." + unlocalizedName);
 		this.setCreativeTab(ModCreativeTabs.tabTech);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
@@ -105,7 +105,7 @@ public class BlockAqueousDeconcentrator extends BlockMachine
 
 	public IBlockState getStateFromMeta(int meta)
 	{
-		EnumFacing enumfacing = EnumFacing.getHorizontal(meta);
+		EnumFacing enumfacing = EnumFacing.byHorizontalIndex(meta);
 		return this.getDefaultState().withProperty(FACING, enumfacing);
 	}
 

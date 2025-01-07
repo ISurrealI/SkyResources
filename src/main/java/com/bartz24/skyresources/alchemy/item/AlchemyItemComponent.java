@@ -21,7 +21,7 @@ public class AlchemyItemComponent extends Item
 	{
 		super();
 
-		setUnlocalizedName(References.ModID + ".alchemyItemComponent.");
+		setTranslationKey(References.ModID + ".alchemyItemComponent.");
 		setRegistryName("alchemyitemcomponent");
 		setHasSubtypes(true);
 		this.setCreativeTab(ModCreativeTabs.tabAlchemy);
@@ -45,9 +45,9 @@ public class AlchemyItemComponent extends Item
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
+	public String getTranslationKey(ItemStack stack)
 	{
-		return super.getUnlocalizedName(stack) + names.get(stack.getItemDamage());
+		return super.getTranslationKey(stack) + names.get(stack.getItemDamage());
 	}
 
 	@Override

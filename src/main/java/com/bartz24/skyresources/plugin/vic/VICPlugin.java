@@ -110,7 +110,7 @@ public class VICPlugin implements IModPlugin
 						- (int) Math.floor((float) ConfigOptions.islandSettings.islandBiomeRange / 2F); z <= zIs
 								+ (int) Math.floor((float) ConfigOptions.islandSettings.islandBiomeRange / 2F); z++)
 				{
-					world.getChunkFromBlockCoords(new BlockPos(x, 64, z))
+					world.getChunk(new BlockPos(x, 64, z))
 							.getBiomeArray()[(new BlockPos(x, 64, z).getZ() & 15) << 4 | (new BlockPos(x, 64, z).getX()
 									& 15)] = (byte) ConfigOptions.islandSettings.islandBiomeID;
 				}

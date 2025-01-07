@@ -25,7 +25,7 @@ public class FluidCrystalBlock extends BlockFluidClassic
 	public FluidCrystalBlock()
 	{
 		super(ModFluids.crystalFluid, Material.WATER);
-		this.setUnlocalizedName(ModFluids.crystalFluid.getUnlocalizedName());
+		this.setTranslationKey(ModFluids.crystalFluid.getUnlocalizedName());
 		this.setRegistryName(RandomHelper.capatilizeString(ModFluids.crystalFluid.getUnlocalizedName()));
 	}
 }
